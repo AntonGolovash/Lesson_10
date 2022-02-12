@@ -20,7 +20,7 @@ string File::GetFile(string path)// возврат данных из файла
 	if (!file.is_open())
 	{
 		cerr << "Error open file:\t" << path << endl;
-		return;
+		return "";
 	}
 	string result(istreambuf_iterator<char>{file}, istreambuf_iterator<char>{});
 	return result;
